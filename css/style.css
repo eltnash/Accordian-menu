@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: url(/img/laurin-steffens-IVGZ6NsmyBI-unsplash.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.accordian {
+    margin: 20px;
+    padding: 10px;
+    width: 65%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.accordian .accordian-title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.accordian .content-container .question{
+    padding: 18px 0px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+.accordian .content-container .question::after {
+    content: '+' ;
+
+    position: absolute;
+    right: -5px;
+}
+
+
+.accordian .content-container .answer {
+    padding-top: 15px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    width: 100%;
+
+    height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+
+
+.accordian .content-container.active  .answer {
+    /* select elements that match all the selector combinations */
+    visibility: visible;
+    height: 180px;
+
+}
+
+.accordian .content-container.active  .question {
+    /* select elements that match all the selector combinations */
+   font-size: 1.2rem;
+   transition: 0.5s;
+
+}
+.accordian .content-container.active  .question::after {
+    /* select elements that match all the selector combinations */
+  content: '-';
+  font-size: 30px;
+  transition: 0.5s;
+  
+
+}
+
+
+
+
+
