@@ -17,14 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
        accordian[i].addEventListener('click', function (){
         //accordian[i] - for the specific element at index [i], do the following.
         //add a click event listener which listens for if the specific element in the DOM has been clicked.
-        // if a specific element has been clicked then execute the code in the function on that specific element.
+        // if a specific element has been clicked then execute the code in the function on that clicked element.
         this.classList.toggle('active')
-
-
-
-
+        // on tht clicked element, add the class of active if it dosent exist and if it does remove it.
+        // so now we can add a styling using that class in our css and it will be toggled on and off with each click.
        })
-
+   
     }
 });
 
